@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js"; 
+import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js"; 
 // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,23 +15,34 @@ const firebaseConfig = {
   appId: "1:1025333461105:web:e9523e92161a44fc3a1bd0",
   measurementId: "G-121JZVJ3YV"
 };
-
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+// config code ends
 
-//addPlayersToDB();
+//addPlayersToDB(playersJSON);
 
-console.log(playersJSON);
+playersJSON.forEach((item)=>{
+  console.log(item.__id);
+});
 
-async function addPlayersToDB(){
+
+
+async function addPlayersToDB(objJSON){
   try {
-    const docRef = await addDoc(collection(db, "players"), {
-      firstName: "Ada",
-      lastName: "Lovelace",
-      dob: 1815
-    });
-    console.log("Document written with ID: ", docRef.id);
+    objJSON.forEach(async (item)=>{
+      await setDoc(doc(db, "players", item.__id), {
+        firstName : item.firstName,
+        lastName : item.lastName,
+        dob : item.dob,
+        img_url : item.img_url,
+        position : item.position,
+        weight : item.weight,
+        height : item.height,
+        country : item.country,
+        place_of_birth : item.place_of_birth
+      });
+      console.log("Document written with ID: ", item.__id);
+    })
   } catch (e) {
     console.error("Error adding document: ", e);
   }
