@@ -1,0 +1,24 @@
+[
+    {
+        "firstName" : "Luka Modric",
+        "lastName" : "",
+        "dob" : "09/09/1985",
+        "img-url" : "",
+        "position" : "Midfielder",
+        "height" : 1.72,
+        "weight" : 66.2,
+        "country" : "Croatia",
+        "place-of-birth" : "Zadar" 
+    },
+    {
+        "firstName" : "Luka Modric",
+        "lastName" : "",
+        "dob" : "09/09/1985",
+        "img-url" : "",
+        "position" : "Midfielder",
+        "height" : 1.72,
+        "weight" : 66.2,
+        "country" : "Croatia",
+        "place-of-birth" : "Zadar" 
+    }
+]
