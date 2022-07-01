@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
-import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js"; 
+import { getFirestore, setDoc, doc, Timestamp, getDocs, collection } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js"; 
 // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,10 +21,16 @@ const db = getFirestore(app);
 
 //addPlayersToDB(playersJSON);
 
-playersJSON.forEach((item)=>{
-  console.log(item.__id);
-});
 
+getPlayerInfo();
+
+
+async function getPlayerInfo(){
+  const querySnapshot = await getDocs(collection(db, "players"));
+  querySnapshot.forEach((doc) => {
+  console.log(doc.data().position);
+});
+}
 
 
 async function addPlayersToDB(objJSON){
@@ -33,7 +39,7 @@ async function addPlayersToDB(objJSON){
       await setDoc(doc(db, "players", item.__id), {
         firstName : item.firstName,
         lastName : item.lastName,
-        dob : item.dob,
+        dob : Timestamp.fromDate(new Date(item.dob)),
         img_url : item.img_url,
         position : item.position,
         weight : item.weight,
