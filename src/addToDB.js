@@ -1,9 +1,8 @@
 import {setDoc , doc, Timestamp} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js";
-import playersJSON from '../real-madrid/players.json' assert {type: 'json'}; 
 import db from './config.js'
 
 
-export default async function addPlayersToDB(objJSON){
+export async function addPlayersToDB(objJSON){
     try {
       objJSON.forEach(async (item)=>{
         await setDoc(doc(db, "players", item.__id), {
@@ -14,8 +13,17 @@ export default async function addPlayersToDB(objJSON){
           position : item.position,
           weight : item.weight,
           height : item.height,
-          country : item.country,
-          place_of_birth : item.place_of_birth
+          country : item.national_team,
+          place_of_birth : item.place_of_birth,
+          flag_url : item.flag_url,
+          stats: {
+                pace : item.stats.pace,
+                shooting : item.stats.shooting,
+                passing: item.stats.passing,
+                dribbling: item.stats.dribbling,
+                defense : item.stats.defense,
+                physical : item.stats.physical
+            }
         });
         console.log("Document written with ID: ", item.__id);
       })
@@ -25,4 +33,3 @@ export default async function addPlayersToDB(objJSON){
   }
 
 
-//addPlayersToDB(playersJSON);

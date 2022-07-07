@@ -8,8 +8,17 @@
         "position" : "Midfielder",
         "height" : 1.72,
         "weight" : 66.2,
-        "country" : "Croatia",
-        "place_of_birth" : "Zadar" 
+        "national_team" : "Croatia",
+        "place_of_birth" : "Zadar",
+        "stats" : {
+            "pace" : 90,
+            "shooting" : 90,
+            "passing": 98,
+            "dribbling": 97,
+            "defense" : 86,
+            "physical" : 86
+        },
+        "flag_url": "https://firebasestorage.googleapis.com/v0/b/real-madrid-58320.appspot.com/o/flags%2Fcroatia.png?alt=media&token=9200bf1f-c8f8-4b09-b580-dabf611f49f4"
     },
     {
         "__id" : "david-alaba",
@@ -20,8 +29,17 @@
         "position" : "Defender",
         "height" : 1.80,
         "weight" : 78,
-        "country" : "Austria",
-        "place_of_birth" : "Viena" 
+        "national_team" : "Austria",
+        "place_of_birth" : "Viena",
+        "stats" : {
+            "pace" : 88,
+            "shooting" : 83,
+            "passing": 91,
+            "dribbling": 91,
+            "defense" : 96,
+            "physical" : 88
+        },
+        "flag_url":"https://firebasestorage.googleapis.com/v0/b/real-madrid-58320.appspot.com/o/flags%2Faustria.png?alt=media&token=10b5e38e-8830-4ba3-a69f-3a36f40424b9"
     },
     {
         "__id" : "marco-asensio",
@@ -32,8 +50,17 @@
         "position" : "Forward",
         "weight" : 76,
         "height" : 1.82,
-        "country" : "Spain",
-        "place_of_birth" : "Palma de Mallorca"
+        "national_team" : "Spain",
+        "place_of_birth" : "Palma de Mallorca",
+        "stats" : {
+            "pace" : 87,
+            "shooting" : 83,
+            "passing": 83,
+            "dribbling": 96,
+            "defense" : 45,
+            "physical" : 65
+        },
+        "flag_url" : "https://firebasestorage.googleapis.com/v0/b/real-madrid-58320.appspot.com/o/flags%2Fspain.png?alt=media&token=4877dc28-ea31-4f59-afcd-180225d11886"
     },
     {
         "__id" : "karim-benzema",
@@ -44,8 +71,17 @@
         "position" : "Forward",
         "weight" : 81.2,
         "height" : 1.85,
-        "country" : "France",
-        "place_of_birth" : "Lyon"
+        "national_team" : "France",
+        "place_of_birth" : "Lyon",
+        "stats" : {
+            "pace" : 95,
+            "shooting" : 98,
+            "passing": 90,
+            "dribbling": 98,
+            "defense" : 47,
+            "physical" : 87
+        },
+        "flag_url":"https://firebasestorage.googleapis.com/v0/b/real-madrid-58320.appspot.com/o/flags%2Ffrance.png?alt=media&token=3833a202-51b1-45a8-baca-676b6f3cd9a3"
     },
     {
         "__id" : "eduardo-camavinga",
@@ -56,8 +92,17 @@
         "position" : "Midfielder",
         "weight" : 68,
         "height" : 1.82,
-        "country" : "Angola",
-        "place_of_birth" : "Cabinda"
+        "national_team" : "France",
+        "place_of_birth" : "Cabinda",
+        "stats" : {
+            "pace" : 86,
+            "shooting" : 77,
+            "passing": 86,
+            "dribbling": 90,
+            "defense" : 85,
+            "physical" : 87
+        },
+        "flag_url":"https://firebasestorage.googleapis.com/v0/b/real-madrid-58320.appspot.com/o/flags%2Ffrance.png?alt=media&token=3833a202-51b1-45a8-baca-676b6f3cd9a3"
     },
     {
         "__id" : "daniel-carvajal-ramos",
@@ -68,7 +113,17 @@
         "position" : "Defender",
         "weight" : 73.5,
         "height" : 1.73,
-        "country" : "Spain",
-        "place_of_birth" : "Leganés"
+        "national_team" : "Spain",
+        "place_of_birth" : "Leganés",
+        "stats" : {
+            "pace" : 80,
+            "shooting" : 54,
+            "passing": 78,
+            "dribbling": 81,
+            "defense" : 82,
+            "physical" : 80
+        },
+        "flag_url":"https://firebasestorage.googleapis.com/v0/b/real-madrid-58320.appspot.com/o/flags%2Fspain.png?alt=media&token=4877dc28-ea31-4f59-afcd-180225d11886"
     }
 ]
+

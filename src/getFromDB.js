@@ -1,4 +1,4 @@
-import {getDocs, collection } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js";
+import {getDocs, collection, doc, getDoc} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js";
 import db from './config.js'
 
 export async function getPlayersFromDB(){
@@ -10,7 +10,11 @@ export async function getPlayersFromDB(){
     return playerList;
 }
 
-
-
-
-
+export async function getAllPlayerID(){
+    const querySnapshot = await getDocs(collection(db, "players"));
+    const idList = []
+    querySnapshot.forEach((doc) => {
+        idList.push(doc.id)
+    });
+    return idList;
+}

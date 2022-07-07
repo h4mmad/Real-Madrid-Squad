@@ -2,6 +2,31 @@
     margin: 0;
     padding: 0;
 }
-.player{
-    
+#main-div{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.player-card{
+    margin-bottom: 6rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.player-flag{
+    width: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.player-pic{
+    height: auto;
+    width: 15rem;
 }

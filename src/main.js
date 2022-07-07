@@ -1,21 +1,49 @@
-import {getPlayersFromDB} from './getFromDB.js'
+import {getPlayersFromDB, getAllPlayerID} from './getFromDB.js'
+// import playersJSON from '../real-madrid/players.json' assert {type: 'json'}; 
+
+
+const playerList = await getPlayersFromDB();
+const playerIDs = await getAllPlayerID();
+
 
 const mainDiv = document.getElementById("main-div");
 
-async function paint(){
-    const playerList = await getPlayersFromDB();
-    playerList.forEach(element => {
+
+
+
+function paint(){
+    playerList.forEach((element) => {
         const playerPic = document.createElement("img");
-        playerPic.src = element.img_url;
-        playerPic.setAttribute("class", "player");
+        const playerFlag = document.createElement("img");
+        const playerCard = document.createElement("div");
+
+        playerPic.src = element['img_url'];
+        playerPic.setAttribute("class", "player-pic");
+
+        playerFlag.src = element['flag_url'];
+        playerFlag.setAttribute("class", "player-flag");
+
+        playerCard.setAttribute("class", "player-card");
+
+
+
         playerPic.addEventListener("click", ()=>{
-            console.log(element);
+            console.log(element['flag_url']);
         });
-        mainDiv.append(playerPic);
+
+
+        playerCard.append(playerPic);
+        playerCard.append(playerFlag);
+        mainDiv.append(playerCard);
     });
 };
 
+
+
 paint();
+
+
+
 
 
 
