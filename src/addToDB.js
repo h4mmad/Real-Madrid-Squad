@@ -13,7 +13,7 @@ export async function addPlayersToDB(objJSON){
           position : item.position,
           weight : item.weight,
           height : item.height,
-          country : item.national_team,
+          national_team : item.national_team,
           place_of_birth : item.place_of_birth,
           flag_url : item.flag_url,
           stats: {
