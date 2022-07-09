@@ -18,31 +18,31 @@ function paint(){
         const playerFlag = document.createElement("img");
         const playerCard = document.createElement("div");
         const playerName = document.createElement("h3");
+        const toolTip = document.createElement("div");
+        const toolTipText = document.createElement("span");
         
         playerPic.src = element['img_url'];
         playerPic.setAttribute("class", "player-pic");
 
         playerFlag.src = element['flag_url'];
         playerFlag.setAttribute("class", "player-flag");
-        playerFlag.setAttribute("title", element.national_team);
+        // playerFlag.setAttribute("title", element.national_team);
 
         playerCard.setAttribute("class", "player-card");
 
         playerName.textContent = `${element.firstName} ${element.lastName}`;
         playerName.setAttribute("class", "player-name");
 
-        
-
-
-
-        playerPic.addEventListener("click", ()=>{
-            console.log(element['flag_url']);
-        });
+        toolTip.className = "tooltip";
+        toolTipText.className = "tooltiptext";
+        toolTipText.textContent = element.national_team;
+        toolTip.append(playerFlag);
+        toolTip.append(toolTipText);
 
 
         playerCard.append(playerPic);
         playerCard.append(playerName);
-        playerCard.append(playerFlag);
+        playerCard.append(toolTip);
         mainDiv.append(playerCard);
         console.log(element.country);
     });
